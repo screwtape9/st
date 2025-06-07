@@ -5,13 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono:style=Regular:pixelsize=18";
+static char *font = "TerminessTTF Nerd Font:style=Medium:pixelsize=20";
 /* Spare fonts */
 static char *font2[] = {
-  "JoyPixels:pixelsize=18:antialias=true:autohint=true",
-  "SF Mono:style=Regular:pixelsize=16",
   "Consolas:style=Regular:pixelsize=20",
-  "TerminessTTF Nerd Font:style=Medium:pixelsize=20"
+  "SF Mono:style=Regular:pixelsize=16",
+  "JetBrains Mono:style=Regular:pixelsize=20",
+  "JoyPixels:pixelsize=18:antialias=true:autohint=true"
 };
 static int borderpx = 2;
 
