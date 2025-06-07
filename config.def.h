@@ -5,7 +5,14 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetBrains Mono:style=Regular:pixelsize=18";
+/* Spare fonts */
+static char *font2[] = {
+  "JoyPixels:pixelsize=18:antialias=true:autohint=true",
+  "SF Mono:style=Regular:pixelsize=16",
+  "Consolas:style=Regular:pixelsize=20",
+  "TerminessTTF Nerd Font:style=Medium:pixelsize=20"
+};
 static int borderpx = 2;
 
 /*
@@ -94,49 +101,43 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8, alphaUnfocused = 0.6;
+float alpha = 0.95, alphaUnfocused = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
+	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#f28fad",
+	"#abe9b3",
+	"#fae3b0",
+	"#06cdfb",
+	"#f5c2e7",
+	"#89dceb",
+	"#d9e0ee",
+	"#988ba2",
+	"#f28fad",
+	"#abe9b3",
+	"#fae3b0",
+	"#96cdfb",
+	"#f5c2e7",
+	"#89dceb",
+	"#d9e0ee",
 	[255] = 0,
-
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#1e1e2e", /* 258 -> bg */
+	"#d9e0ee",
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultfg = 259;
+unsigned int defaultbg = 258;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
-unsigned int bg = 259, bgUnfocused = 259;
+unsigned int bg = 258, bgUnfocused = 258;
 
 /*
  * Default shape of cursor
